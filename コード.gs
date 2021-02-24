@@ -1,4 +1,4 @@
-function myFunction1() {
+function CopyDocumentURL() {
 //完成2
 //スプレッドシートを取得、シートを取得
 //①コンテンツ管理シートのURL（https://docs.google.com/spreadsheets/d/1UCbxv57IAa4SN97fXL4R0vZyMTrGN6L-pj9VU_uZwG4/edit）とタブ名を記載する
