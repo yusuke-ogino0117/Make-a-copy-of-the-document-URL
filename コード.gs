@@ -8,20 +8,27 @@ var spreadsheet = SpreadsheetApp.openByUrl(url);
 var sheet = spreadsheet.getSheetByName("メインシート");
 
 //シートの最終行番号、最終列番号を取得（スプレッドシートに書き込まれている部分だけ取得）
-var startrow = 1;
-var startcol = 1;
-var lastrow = sheet.getLastRow();
-var lastcol = sheet.getLastColumn();
-var lastrow1 = lastrow + 1;
+  var startrow = 1;
+  var startcol = 1;
+  var lastrow = sheet.getLastRow();
+  var lastcol = sheet.getLastColumn();
+  var lastrow1 = lastrow + 1;
 
-Logger.log(lastrow); 
-Logger.log(lastrow1); 
+    Logger.log(lastrow); 
+    Logger.log(lastrow1); 
 
 //シート内データ取得
-var sheetdata = sheet.getSheetValues(startrow, startcol, lastrow1, lastcol);
+  var sheetdata = sheet.getSheetValues(startrow, startcol, lastrow1, lastcol);
 
 //j の箇所をfor文で指定する　j=2から始まり、空白セルの場合はbreak。次に入力されているセルの行番号のみ続ける　<= lastrow j++
 for(var j=2; j <= lastrow ; j++){
+
+ var Fj = sheetdata[j][5];
+ Logger.log(j); 
+ Logger.log(Fj); 
+  if(Fj !== ""){
+  　　 continue;
+  }
 
   fileName = sheetdata[j][2];
 
